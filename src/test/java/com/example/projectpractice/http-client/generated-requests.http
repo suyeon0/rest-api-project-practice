@@ -1,0 +1,19 @@
+###
+
+### 주문 등록
+###
+POST http://localhost:8080/v1/order
+Content-Type: application/json
+
+< ./post.json
+
+### 주문 단건 조회
+GET http://localhost:8080/v1/order/{{orderNo}}
+
+### 주문 리스트 조회
+GET http://localhost:8080/v1/order/list
+
+### 주문 취소
+PATCH http://localhost:8080/v1/order/d15f53e0-7b4d-4053-85c8-7bc2f549dd41
+Content-Type: application/json
+
