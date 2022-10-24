@@ -48,11 +48,11 @@ public class OrderController {
     @GetMapping("/{orderNo}")
     public DefaultResponse getOrder(@PathVariable String orderNo) {
         Order order = this.orderService.getOrder(orderNo);
-        OrderResponse res = OrderResponse.from(order);
+        OrderResponse response = OrderResponse.from(order);
 
         return DefaultResponse.builder()
             .statusCode(HttpStatus.OK.toString())
-            .data(res)
+            .data(response)
             .build();
     }
 
@@ -64,11 +64,11 @@ public class OrderController {
     @GetMapping("/list")
     public DefaultResponse getOrderAll(@RequestParam(required = false, name = "orderStatus") OrderStatus orderStatus) {
         List<Order> orderList = this.orderService.getOrderAll(orderStatus);
-        OrderResponse res = OrderResponse.from(orderList);
+        List<OrderResponse> responseList = OrderResponse.from(orderList);
 
         return DefaultResponse.builder()
             .statusCode(HttpStatus.OK.toString())
-            .data(res)
+            .data(responseList)
             .build();
     }
 

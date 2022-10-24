@@ -42,7 +42,6 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 
-    @JsonManagedReference
     @OneToMany(cascade = CascadeType.MERGE, mappedBy = "order")
     private List<OrderLine> orderLines = new ArrayList<>();
 

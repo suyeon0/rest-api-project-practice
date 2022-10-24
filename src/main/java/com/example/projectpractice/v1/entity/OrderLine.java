@@ -38,7 +38,6 @@ public class OrderLine {
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_no", referencedColumnName = "order_no")
-    @JsonBackReference
     private Order order;
 
     @Builder
