@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -18,7 +19,7 @@ public class OrderResponse {
 
     private OrderStatus orderStatus;
 
-    private List<OrderLineResponse> orderLines = new ArrayList<>();
+    private List<OrderLineResponse> orderLines;
 
     private List<OrderResponse> orderList;
 
@@ -31,11 +32,7 @@ public class OrderResponse {
     }
 
     public static List<OrderResponse> from(List<Order> orderList){
-        List<OrderResponse> orderResponseList = new ArrayList<>();
-        for(Order order : orderList){
-            orderResponseList.add(OrderResponse.from(order));
-        }
-        return orderResponseList;
+        return orderList.stream().map(OrderResponse::from).collect(Collectors.toList());
     }
 
 }

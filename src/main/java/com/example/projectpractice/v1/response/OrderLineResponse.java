@@ -3,8 +3,8 @@ package com.example.projectpractice.v1.response;
 import com.example.projectpractice.v1.entity.OrderLine;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -28,11 +28,7 @@ public class OrderLineResponse {
   }
 
   public static List<OrderLineResponse> from(List<OrderLine> orderLineList) {
-    List<OrderLineResponse> responseList = new ArrayList<>();
-    for (OrderLine orderLine : orderLineList) {
-      responseList.add(OrderLineResponse.from(orderLine));
-    }
-    return responseList;
+    return orderLineList.stream().map(OrderLineResponse::from).collect(Collectors.toList());
   }
 
 }
