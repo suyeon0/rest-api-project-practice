@@ -3,7 +3,6 @@ package com.example.projectpractice.v1.service;
 import com.example.projectpractice.v1.entity.Order;
 import com.example.projectpractice.v1.entity.OrderLine;
 import com.example.projectpractice.enums.OrderStatus;
-import com.example.projectpractice.v1.repository.OrderLineRepository;
 import com.example.projectpractice.v1.repository.OrderRepository;
 import com.example.projectpractice.v1.request.OrderRequest;
 import java.util.List;
@@ -19,7 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class OrderService {
 
     private final OrderRepository orderRepository;
-    private final OrderLineRepository orderLineRepository;
 
     /**
      * 주문 생성

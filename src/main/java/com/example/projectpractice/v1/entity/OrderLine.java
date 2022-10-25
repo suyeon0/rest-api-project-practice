@@ -37,7 +37,7 @@ public class OrderLine {
 
     @Setter
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_no", referencedColumnName = "order_no")
+    @JoinColumn(name = "order_no")
     private Order order;
 
     @Builder
