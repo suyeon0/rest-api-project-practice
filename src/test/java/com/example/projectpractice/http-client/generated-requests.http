@@ -1,4 +1,8 @@
-###
+### health-check
+GET http://localhost:8080/actuator/health
+
+### health-check-liveness
+GET http://localhost:8080/actuator/health/liveness
 
 ### 주문 등록
 ###
