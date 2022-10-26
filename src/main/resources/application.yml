@@ -8,10 +8,19 @@ logging:
         type:
           descriptor:
             sql: trace
+  config: classpath:logback-spring.xml
+
+practice:
+  log:
+    file-name: practice
+    file-path: log/
+    error-file-name: practice_error
+    error-file-path: log/practice
+    max-history: 1
 
 spring:
   datasource:
-    dirver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/practice?createDatabaseIfNotExist=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
     username: root
     password: admin
