@@ -1,4 +1,4 @@
-package com.example.projectpractice.enums;
+package com.example.projectpractice.order.enums;
 
 import java.util.Arrays;
 import java.util.List;

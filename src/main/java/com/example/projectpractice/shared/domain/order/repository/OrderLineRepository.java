@@ -1,6 +1,6 @@
-package com.example.projectpractice.v1.repository;
+package com.example.projectpractice.shared.domain.order.repository;
 
-import com.example.projectpractice.v1.entity.OrderLine;
+import com.example.projectpractice.shared.domain.order.entity.OrderLine;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

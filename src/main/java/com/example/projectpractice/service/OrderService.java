@@ -1,18 +1,20 @@
-package com.example.projectpractice.v1.service;
+package com.example.projectpractice.service;
 
-import com.example.projectpractice.v1.entity.Order;
-import com.example.projectpractice.v1.entity.OrderLine;
-import com.example.projectpractice.enums.OrderStatus;
-import com.example.projectpractice.v1.repository.OrderRepository;
-import com.example.projectpractice.v1.request.OrderRequest;
+import com.example.projectpractice.shared.domain.order.entity.Order;
+import com.example.projectpractice.shared.domain.order.entity.OrderLine;
+import com.example.projectpractice.order.enums.OrderStatus;
+import com.example.projectpractice.shared.domain.order.repository.OrderRepository;
+import com.example.projectpractice.order.request.OrderRequest;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class OrderService {

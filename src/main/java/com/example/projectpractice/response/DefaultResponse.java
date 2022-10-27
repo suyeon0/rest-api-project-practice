@@ -1,4 +1,4 @@
-package com.example.projectpractice.v1.response;
+package com.example.projectpractice.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -10,8 +10,8 @@ import lombok.Getter;
 @JsonInclude(Include.NON_NULL)
 public class DefaultResponse<T> {
 
-    private final String statusCode;
-    private final String responseMessage;
+    private final int statusCode;
+    private final String message;
     private final T data;
 
 }

@@ -1,4 +1,4 @@
-package com.example.projectpractice.v1.request;
+package com.example.projectpractice.order.request;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;

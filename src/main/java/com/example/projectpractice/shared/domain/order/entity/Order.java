@@ -1,7 +1,6 @@
-package com.example.projectpractice.v1.entity;
+package com.example.projectpractice.shared.domain.order.entity;
 
-import com.example.projectpractice.enums.OrderStatus;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.example.projectpractice.order.enums.OrderStatus;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

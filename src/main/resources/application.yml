@@ -16,7 +16,7 @@ practice:
     file-path: log/
     error-file-name: practice_error
     error-file-path: log/practice
-    max-history: 1
+    max-history: 30
 
 spring:
   datasource:

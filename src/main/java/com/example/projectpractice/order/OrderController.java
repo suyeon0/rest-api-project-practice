@@ -1,11 +1,11 @@
-package com.example.projectpractice.v1.controller;
+package com.example.projectpractice.order;
 
-import com.example.projectpractice.v1.entity.Order;
-import com.example.projectpractice.enums.OrderStatus;
-import com.example.projectpractice.v1.response.DefaultResponse;
-import com.example.projectpractice.v1.request.OrderRequest;
-import com.example.projectpractice.v1.response.OrderResponse;
-import com.example.projectpractice.v1.service.OrderService;
+import com.example.projectpractice.shared.domain.order.entity.Order;
+import com.example.projectpractice.order.enums.OrderStatus;
+import com.example.projectpractice.response.DefaultResponse;
+import com.example.projectpractice.order.response.OrderResponse;
+import com.example.projectpractice.order.request.OrderRequest;
+import com.example.projectpractice.service.OrderService;
 import java.util.List;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -36,7 +36,7 @@ public class OrderController {
         this.orderService.order(orderRequest);
 
         return DefaultResponse.builder()
-            .statusCode(HttpStatus.CREATED.toString())
+            .statusCode(HttpStatus.CREATED.value())
             .build();
     }
 
@@ -51,7 +51,7 @@ public class OrderController {
         OrderResponse response = OrderResponse.from(order);
 
         return DefaultResponse.builder()
-            .statusCode(HttpStatus.OK.toString())
+            .statusCode(HttpStatus.OK.value())
             .data(response)
             .build();
     }
@@ -67,7 +67,7 @@ public class OrderController {
         List<OrderResponse> responseList = OrderResponse.from(orderList);
 
         return DefaultResponse.builder()
-            .statusCode(HttpStatus.OK.toString())
+            .statusCode(HttpStatus.OK.value())
             .data(responseList)
             .build();
     }
@@ -82,7 +82,7 @@ public class OrderController {
         this.orderService.cancelOrder(orderNo);
 
         return DefaultResponse.builder()
-            .statusCode(HttpStatus.OK.toString())
+            .statusCode(HttpStatus.OK.value())
             .build();
     }
 }

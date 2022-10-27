@@ -1,10 +1,9 @@
-package com.example.projectpractice.v1.response;
+package com.example.projectpractice.order.response;
 
-import com.example.projectpractice.enums.OrderStatus;
-import com.example.projectpractice.v1.entity.Order;
+import com.example.projectpractice.order.enums.OrderStatus;
+import com.example.projectpractice.shared.domain.order.entity.Order;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.Builder;

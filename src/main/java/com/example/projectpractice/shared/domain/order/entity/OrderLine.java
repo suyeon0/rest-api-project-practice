@@ -1,7 +1,6 @@
-package com.example.projectpractice.v1.entity;
+package com.example.projectpractice.shared.domain.order.entity;
 
-import com.example.projectpractice.v1.request.OrderLineRequest;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.example.projectpractice.order.request.OrderLineRequest;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

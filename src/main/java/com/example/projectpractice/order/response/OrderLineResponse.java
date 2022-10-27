@@ -1,6 +1,6 @@
-package com.example.projectpractice.v1.response;
+package com.example.projectpractice.order.response;
 
-import com.example.projectpractice.v1.entity.OrderLine;
+import com.example.projectpractice.shared.domain.order.entity.OrderLine;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import java.util.List;
